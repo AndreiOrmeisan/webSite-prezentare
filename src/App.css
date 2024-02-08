@@ -1,14 +1,5 @@
-.css-uh1pua {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.css-i9gxme{
-  margin-bottom: 50px;
-}
-
-.css-1nieira-MuiPaper-root-MuiCard-root{
-  margin-bottom: 20px;
+.homePage-oa {
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
