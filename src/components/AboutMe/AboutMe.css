@@ -3,4 +3,20 @@
   padding-right: 30px;
   display: flex;
   justify-content: center;
+  gap: 100px;
+
+  .container-aboutMe {
+    .cards-oa {
+      height: 200px;
+      width: 600px;
+
+      h3 {
+        margin: 0;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
 }

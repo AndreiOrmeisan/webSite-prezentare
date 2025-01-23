@@ -1,24 +1,59 @@
-import { Container } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import Card from "../Utils/Card";
 import * as React from "react";
+import "./BeckEtAl.css";
+
+const jobInfo = [
+  {
+    id: 1,
+    title: "Description",
+    text: (
+      <ul>
+        <li>
+          Discuss and consult with clients to understand their digitalization
+          needs
+        </li>
+        <li>Develop workflows for customers in JobRouter platform</li>
+        <li>Analysis sheet and user manual at the end of the projec</li>
+      </ul>
+    ),
+  },
+  {
+    id: 2,
+    title: "Tech stack",
+    text: (
+      <ul>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+        <li>PHP</li>
+      </ul>
+    ),
+  },
+  {
+    id: 3,
+    title: "Tools",
+    text: (
+      <ul>
+        <li>JobRouter</li>
+        <li>SQL Server</li>
+        <li>Microsoft Power App</li>
+      </ul>
+    ),
+  },
+];
 
 export default function BeckEtAl() {
   return (
-    <Container maxWidth="sm">
-      <Card sx={{ maxWidth: 800 }}>
-        <CardMedia sx={{ height: 100 }} title="C#" />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Details Beck et Al
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Later...
-          </Typography>
-        </CardContent>
-      </Card>
-    </Container>
+    <div className="container">
+      {jobInfo.map((info) => (
+        <Card
+          sx={{ maxWidth: 800 }}
+          id={info.id}
+          title={info.title}
+          text={info.text}
+        />
+      ))}
+    </div>
   );
 }

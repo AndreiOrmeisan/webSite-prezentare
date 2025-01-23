@@ -15,21 +15,34 @@ export default function AboutMe() {
           sx={{ width: 250, height: 250 }}
         />
       </div>
-      <Card
-        title="Description"
-        text="I am a web developer, I work in both frontend and backend. Developing, troubleshooting and maintaining website software according
-          to client's requirements."
-      />
-      <Card
-        title="Description"
-        text="I am a web developer, I work in both frontend and backend. Developing, troubleshooting and maintaining website software according
-          to client's requirements."
-      />
-      <Card
-        title="Description"
-        text="I am a web developer, I work in both frontend and backend. Developing, troubleshooting and maintaining website software according
-        to client's requirements."
-      />
+      <div className="container-aboutMe">
+        <Card
+          title="About me"
+          text={
+            <ui>
+              <li>
+                Extensive experience in developing and maintaining web
+                application using <b>JavaScript</b>
+              </li>
+              <li>
+                Proficient in technologies such as <b>React.js</b>,
+                <b> Node.js</b>, <b> Jest</b>, <b> HTML </b>
+                and <b>CSS</b>
+              </li>
+              <li>
+                Skilledin utilizing tools like <b>JIRA</b>, <b> Git</b>,
+                <b> MySQL</b>, <b> Oracle SQL Developer</b>,
+                <b> MongoDB Atlas</b>, <b> Postman</b>, <b> ServiceBus</b>,
+                <b> Confluence</b>, <b> Robo 3T </b> and <b>Lucidchart</b>
+              </li>
+              <li>
+                Possess strong analytical, debugging, and troubleshooting
+                skills, with a proven ability to learn and adapt quickly
+              </li>
+            </ui>
+          }
+        />
+      </div>
     </div>
   );
 }

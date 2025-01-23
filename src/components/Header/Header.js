@@ -7,10 +7,17 @@ export default function Header() {
   const navigate = useNavigate();
   const [selected, setSelected] = React.useState("/");
 
-  function handleClick(route) {
+  const handleClick = (route) => {
     setSelected(route);
     navigate(route);
-  }
+  };
+
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/2025-Ormenisa Andrei CV.pdf";
+    link.download = "2025-Ormenisa Andrei CV.pdf";
+    link.click();
+  };
 
   return (
     <div className="header-oa">
@@ -26,19 +33,22 @@ export default function Header() {
         }
         onClick={() => handleClick("/juniorMind")}
       >
-        Junior Mind
+        Junior Mind (2019 - 2020)
       </button>
       <button
         className={selected === "/beckEtAl" ? "button-oa-active" : "button-oa"}
         onClick={() => handleClick("/beckEtAl")}
       >
-        Beck et Al
+        Beck et Al (2020 - 2021)
       </button>
       <button
         className={selected === "/cognizant" ? "button-oa-active" : "button-oa"}
         onClick={() => handleClick("/cognizant")}
       >
-        Cognizant
+        Cognizant (2021 - Present)
+      </button>
+      <button className="button-oa" onClick={() => downloadCV()}>
+        Download CV
       </button>
     </div>
   );
