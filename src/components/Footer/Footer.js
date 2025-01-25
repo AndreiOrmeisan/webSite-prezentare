@@ -23,9 +23,6 @@ export default function Footer() {
         >
           <LinkedIn />
         </a>
-        <a href="https://www.instagram.com/andreiormenisan/">
-          <Instagram />
-        </a>
       </div>
     </div>
   );
