@@ -8,20 +8,11 @@ import JuniorMind from "./components/JuniorMind/JuniorMind";
 import Cognizant from "./components/Cognizant/Cognizant";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import background from "./jsPhoto.jpg";
 
 class App extends Component {
   render() {
     return (
-      <div
-        className="homePage-oa"
-        style={{
-          background: `url(${background})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <div className="homePage-oa">
         <Router>
           <Header />
           <Routes>

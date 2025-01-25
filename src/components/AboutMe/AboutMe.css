@@ -1,21 +1,47 @@
-.wrapper-aboutMe-oa {
-  padding-left: 30px;
-  padding-right: 30px;
+.aboutMe {
   display: flex;
+  flex-direction: row; /* Elemente aliniate orizontal */
   justify-content: center;
-  gap: 100px;
+  align-items: center;
+
+  .avatar-oa {
+    padding: 20px;
+  }
 
   .container-aboutMe {
-    .cards-oa {
-      height: 200px;
-      width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-      h3 {
-        margin: 0;
+    .wrapper-aboutMe-oa {
+      padding-left: 30px;
+      padding-right: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+
+      .card-aboutMe {
+        .cards-oa {
+          height: 200px;
+          width: 600px;
+
+          h3 {
+            margin: 0;
+          }
+
+          p {
+            text-align: justify;
+          }
+        }
       }
+    }
 
-      p {
-        text-align: justify;
+    .skillMeterWrapper {
+      width: 500px;
+
+      .skillMeterContainer {
+        display: flex;
+        flex-direction: row;
       }
     }
   }
