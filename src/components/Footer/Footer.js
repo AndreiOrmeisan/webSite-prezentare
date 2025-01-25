@@ -1,7 +1,7 @@
 import "./Footer.css";
 
 import * as React from "react";
-import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 export default function Footer() {
   return (
