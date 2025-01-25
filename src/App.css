@@ -1,14 +1,23 @@
-.homePage-oa {
-  min-height: 100vh; /* Asigură că ocupă întreaga înălțime a ecranului */
+.app-container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* Permite derularea pe axa verticală */
   background: url("./jsPhoto.jpg") center/cover no-repeat;
   padding-bottom: 50px;
+
+  .content-container {
+    flex: 1;
+    overflow-x: auto;
+  }
 }
 
 @media (max-width: 768px) {
-  .homePage-oa {
-    padding: 0 1px; /* Adaugă puțin padding pe mobil pentru a nu se atinge marginile */
+  .app-container {
+    padding: 0 1px;
+
+    .content-container {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

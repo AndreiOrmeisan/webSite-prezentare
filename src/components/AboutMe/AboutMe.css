@@ -2,47 +2,116 @@
   display: flex;
   flex-direction: row; /* Elemente aliniate orizontal */
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap; /* Permite să rearanjeze elementele pe rânduri la nevoie */
+  padding: 20px;
+}
 
-  .avatar-oa {
-    padding: 20px;
+.avatar-oa {
+  padding: 20px;
+}
+
+.container-aboutMe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Elemente se aliniază pe rânduri dacă spațiul este insuficient */
+}
+
+.wrapper-aboutMe-oa {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column; /* Setează direcția verticală pe dispozitive mici */
+  align-items: center;
+  gap: 20px; /* Spațiere între elemente */
+}
+
+.card-aboutMe {
+  width: 100%; /* Se ajustează să ocupe tot spațiul pe dispozitive mici */
+  max-width: 600px; /* Lățimea maximă pe ecrane mari */
+}
+
+.cards-oa {
+  height: auto;
+  width: 100%; /* Se ajustează pe dispozitive mici */
+}
+
+.cards-oa h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.cards-oa p {
+  text-align: justify;
+}
+
+.skillMeterWrapper {
+  width: 100%; /* Ajustare pe dispozitive mici */
+  max-width: 550px; /* Lățimea maximă pe dispozitive mari */
+}
+
+.skillMeterContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permite rearanjarea barelor pe mai multe rânduri */
+  gap: 10px; /* Spațiere între barele de skill */
+}
+
+/* Media Queries pentru responsive */
+@media (max-width: 1024px) {
+  .container-aboutMe {
+    flex-direction: column; /* Stivuește elementele pe verticală */
+    align-items: center;
+    gap: 20px;
   }
 
-  .container-aboutMe {
-    display: flex;
-    flex-direction: row;
+  .skillMeterWrapper {
+    width: 80%; /* Mai puțin spațiu pe ecrane medii */
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutMe {
+    flex-direction: column; /* Elemente stivuite pe verticală */
     align-items: center;
+  }
 
-    .wrapper-aboutMe-oa {
-      padding-left: 30px;
-      padding-right: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 100px;
+  .avatar-oa {
+    padding: 10px;
+  }
 
-      .card-aboutMe {
-        .cards-oa {
-          height: 200px;
-          width: 600px;
+  .wrapper-aboutMe-oa {
+    padding: 10px;
+    gap: 10px;
+  }
 
-          h3 {
-            margin: 0;
-          }
+  .skillMeterWrapper {
+    width: 100%;
+  }
 
-          p {
-            text-align: justify;
-          }
-        }
-      }
+  .card-aboutMe {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillMeterWrapper {
+    width: 100%; /* Se extinde complet pe ecrane mici */
+
+    .skillMeterContainer {
+      gap: 0;
     }
+  }
 
-    .skillMeterWrapper {
-      width: 500px;
+  .card-aboutMe {
+    width: 100%; /* Ocupă întreaga lățime */
+    align-items: center;
+  }
 
-      .skillMeterContainer {
-        display: flex;
-        flex-direction: row;
-      }
-    }
+  .cards-oa {
+    width: 100%; /* Ajustare completă pentru ecrane foarte mici */
+  }
+
+  .cards-oa h3 {
+    font-size: 1rem; /* Text mai mic pentru ecrane mici */
   }
 }

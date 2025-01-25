@@ -12,15 +12,17 @@ import Footer from "./components/Footer/Footer";
 class App extends Component {
   render() {
     return (
-      <div className="homePage-oa">
+      <div className="app-container">
         <Router>
           <Header />
-          <Routes>
-            <Route exact path="/" element={<AboutMe />}></Route>
-            <Route exact path="/becketal" element={<BeckEtAl />}></Route>
-            <Route exact path="/juniorMind" element={<JuniorMind />}></Route>
-            <Route exact path="/cognizant" element={<Cognizant />}></Route>
-          </Routes>
+          <div className="content-container">
+            <Routes>
+              <Route exact path="/" element={<AboutMe />} />
+              <Route exact path="/becketal" element={<BeckEtAl />} />
+              <Route exact path="/juniorMind" element={<JuniorMind />} />
+              <Route exact path="/cognizant" element={<Cognizant />} />
+            </Routes>
+          </div>
           <Footer />
         </Router>
       </div>

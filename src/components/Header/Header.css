@@ -4,9 +4,11 @@
   align-items: center;
   height: 70px;
   background-color: rgba(0, 0, 0, 0.3);
-  margin-bottom: 50px;
   justify-content: space-between;
   padding: 0 20px;
+  position: sticky; /* Poziție sticky */
+  top: 0; /* Rămâne lipit de partea de sus a paginii */
+  z-index: 100; /* Se asigură că header-ul este peste alte elemente */
 }
 
 .button-oa {
