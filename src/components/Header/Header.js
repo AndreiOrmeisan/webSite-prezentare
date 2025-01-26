@@ -1,15 +1,14 @@
 import "./Header.css";
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import DownloadCVSection from "../Utils/DownloadCV";
 
 export default function Header() {
   const navigate = useNavigate();
-  const [selected, setSelected] = React.useState("/");
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false); // State for mobile menu
 
   const handleClick = (route) => {
-    setSelected(route);
     navigate(route);
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false); // Close menu when a route is selected
@@ -28,14 +27,18 @@ export default function Header() {
       </div>
       <div className={`menu ${isMobileMenuOpen ? "open" : ""}`}>
         <button
-          className={selected === "/" ? "button-oa-active" : "button-oa"}
+          className={
+            location.pathname === "/" ? "button-oa-active" : "button-oa"
+          }
           onClick={(e) => handleClick("/")}
         >
           About Me
         </button>
         <button
           className={
-            selected === "/juniorMind" ? "button-oa-active" : "button-oa"
+            location.pathname === "/juniorMind"
+              ? "button-oa-active"
+              : "button-oa"
           }
           onClick={() => handleClick("/juniorMind")}
         >
@@ -43,7 +46,7 @@ export default function Header() {
         </button>
         <button
           className={
-            selected === "/beckEtAl" ? "button-oa-active" : "button-oa"
+            location.pathname === "/beckEtAl" ? "button-oa-active" : "button-oa"
           }
           onClick={() => handleClick("/beckEtAl")}
         >
@@ -51,7 +54,9 @@ export default function Header() {
         </button>
         <button
           className={
-            selected === "/cognizant" ? "button-oa-active" : "button-oa"
+            location.pathname === "/cognizant"
+              ? "button-oa-active"
+              : "button-oa"
           }
           onClick={() => handleClick("/cognizant")}
         >
