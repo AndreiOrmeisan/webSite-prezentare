@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url("./jsPhoto.jpg") center/cover no-repeat;
+  background: linear-gradient(to bottom right, #13213b, #4482c0);
   padding-bottom: 50px;
 
   .content-container {

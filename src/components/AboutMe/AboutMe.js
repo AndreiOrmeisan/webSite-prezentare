@@ -5,6 +5,8 @@ import * as React from "react";
 import profilImage from "./profilImage.JPG";
 import Card from "../Utils/Card";
 import SkillMeter from "../Utils/SkillMeter";
+import HexagonGrid from "../Utils/HexagonGrid";
+import { Group, Whatshot, Autorenew, Lightbulb } from "@mui/icons-material";
 
 const skills = [
   { skill: "JavaScript", percentage: 100, color: "#F7DF1E" },
@@ -12,6 +14,33 @@ const skills = [
   { skill: "Node.js", percentage: 40, color: "#68A063" },
   { skill: "HTML", percentage: 80, color: "#E34F26" },
   { skill: "CSS", percentage: 80, color: "#1572B6" },
+];
+
+const hexagons = [
+  {
+    id: 1,
+    title: "Team player",
+    description: "More info about Hexagon 1",
+    icon: <Group style={{ fontSize: 80, color: "#D4AF37" }} />,
+  },
+  {
+    id: 2,
+    title: "Motivated",
+    description: "More info about Hexagon 2",
+    icon: <Whatshot style={{ fontSize: 80, color: "#D4AF37" }} />,
+  },
+  {
+    id: 3,
+    title: "Easy to adapt to change",
+    description: "More info about Hexagon 3",
+    icon: <Autorenew style={{ fontSize: 80, color: "#D4AF37" }} />,
+  },
+  {
+    id: 4,
+    title: "Focus on problem solving",
+    description: "More info about Hexagon 4",
+    icon: <Lightbulb style={{ fontSize: 80, color: "#D4AF37" }} />,
+  },
 ];
 
 export default function AboutMe() {
@@ -72,6 +101,7 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
+      <HexagonGrid hexagons={hexagons} />
     </div>
   );
 }

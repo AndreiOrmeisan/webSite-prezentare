@@ -1,0 +1,117 @@
+/* Hexagon Grid */
+.hexagon-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.hexagon {
+  width: 150px;
+  height: 165px;
+  background: linear-gradient(36deg, #007bff, #001f3f); /* Albastru accentuat */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  transition: transform 0.3s, box-shadow 0.6s;
+}
+
+.hexagon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hexagon-content {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: linear-gradient(
+    145deg,
+    #001f3f,
+    #007bff
+  ); /* Dominat de albastru */
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #d4af37; /* Accent pe albastru */
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #e0e0e0; /* Gri deschis pentru contrast */
+}
+
+.close-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #007bff; /* Albastru pentru buton */
+  color: white;
+  border: 1px solid #001f3f; /* Contur subtil albastru închis */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.close-button:hover {
+  background: #001f3f; /* Albastru închis la hover */
+  transform: scale(1.1);
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .hexagon {
+    width: 100px;
+    height: 130px;
+  }
+
+  .hexagon-content {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hexagon {
+    width: 80px;
+    height: 100px;
+  }
+
+  .hexagon-content {
+    font-size: 10px;
+  }
+}

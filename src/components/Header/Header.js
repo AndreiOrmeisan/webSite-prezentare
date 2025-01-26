@@ -6,7 +6,7 @@ import DownloadCVSection from "../Utils/DownloadCV";
 export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false); // State for mobile menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const handleClick = (route) => {
     navigate(route);
@@ -16,7 +16,8 @@ export default function Header() {
   };
 
   return (
-    <div className="header-oa">
+    <header className="header-oa">
+      <div className="logo">My Portfolio</div>
       <div
         className="menu-toggle"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -25,12 +26,12 @@ export default function Header() {
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
-      <div className={`menu ${isMobileMenuOpen ? "open" : ""}`}>
+      <nav className={`menu ${isMobileMenuOpen ? "open" : ""}`}>
         <button
           className={
             location.pathname === "/" ? "button-oa-active" : "button-oa"
           }
-          onClick={(e) => handleClick("/")}
+          onClick={() => handleClick("/")}
         >
           About Me
         </button>
@@ -63,7 +64,7 @@ export default function Header() {
           Cognizant (2021 - Present)
         </button>
         <DownloadCVSection />
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }

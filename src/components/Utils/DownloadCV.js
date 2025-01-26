@@ -25,7 +25,7 @@ export default function DownloadCVSection() {
       link.href = "/2025-Ormenisa Andrei CV.pdf";
       link.download = "2025-Ormenisa Andrei CV.pdf";
       document.body.appendChild(link);
-      link.click();
+      //link.click();
       document.body.removeChild(link);
     }, 1000);
   };

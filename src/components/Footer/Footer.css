@@ -1,16 +1,93 @@
+/* Stil general pentru footer */
 .footer-oa {
-  display: flex;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.text-oa {
+  background-color: #1b263b;
   color: white;
+  padding: 15px 20px; /* Reduce padding */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Două coloane */
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  font-size: 0.9rem; /* Diminuează textul */
 }
 
-.card-oa {
-  margin: 0 auto;
+/* Card pentru contact */
+.contact-card {
+  flex: 1;
+  min-width: 250px; /* Dimensiune minimă pentru responsivitate */
+}
+
+.contact-card h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #f1c40f; /* Aur pentru evidențiere */
+}
+
+.contact-card p {
+  margin: 5px 0;
+}
+
+.contact-card a {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Card pentru social media */
+.social-card {
+  flex: 1;
+  min-width: 250px;
+}
+
+.social-card h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #f1c40f; /* Aur pentru evidențiere */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Spațiu între iconițe */
+}
+
+.social-link {
+  color: white;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-link:hover {
+  color: #f1c40f; /* Aur la hover */
+  transform: scale(1.1); /* Mărire ușoară la hover */
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .footer-oa {
+    grid-template-columns: 1fr; /* O singură coloană pe mobil */
+    text-align: center;
+  }
+
+  .contact-card,
+  .social-card {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-oa {
+    padding: 20px;
+  }
+
+  .contact-card h3,
+  .social-card h3 {
+    font-size: 1.2rem; /* Dimensiune mai mică pentru titluri */
+  }
+
+  .social-icons {
+    gap: 10px; /* Spațiu mai mic între iconițe */
+  }
 }
