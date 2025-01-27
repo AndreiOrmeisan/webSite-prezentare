@@ -26,13 +26,13 @@
 
 @media (max-width: 480px) {
   .skill-meter {
-    width: 40px; /* Iconițe și mai mici pe ecrane mici */
+    width: 25px; /* Iconițe și mai mici pe ecrane mici */
   }
 
   .skill-meter h3 {
     color: #fff;
     text-align: center;
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 7px;
   }
 }

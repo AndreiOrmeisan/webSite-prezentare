@@ -11,7 +11,29 @@ const HexagonGrid = ({ hexagons }) => {
 
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
-    setTooltip((prev) => ({ ...prev, x: clientX, y: clientY }));
+
+    // Verificăm limitele ecranului
+    const tooltipWidth = 200; // Lățimea tooltip-ului în CSS
+    const tooltipHeight = 100; // Înălțimea aproximativă a tooltip-ului
+    const padding = 10; // Margine suplimentară
+
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    let x = clientX + padding;
+    let y = clientY + padding;
+
+    // Ajustăm poziția pe orizontală dacă iese din ecran
+    if (x + tooltipWidth > screenWidth) {
+      x = clientX - tooltipWidth - padding;
+    }
+
+    // Ajustăm poziția pe verticală dacă iese din ecran
+    if (y + tooltipHeight > screenHeight) {
+      y = clientY - tooltipHeight - padding;
+    }
+
+    setTooltip((prev) => ({ ...prev, x, y }));
   };
 
   const handleMouseLeave = () => {
@@ -38,8 +60,8 @@ const HexagonGrid = ({ hexagons }) => {
         <div
           className="tooltip"
           style={{
-            top: `${tooltip.y + 10}px`, // 10px distanță sub cursor
-            left: `${tooltip.x + 10}px`,
+            top: `${tooltip.y}px`,
+            left: `${tooltip.x}px`,
           }}
         >
           <h2>{tooltip.hexagon.title}</h2>
