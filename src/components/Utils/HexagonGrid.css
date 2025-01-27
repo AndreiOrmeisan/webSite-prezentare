@@ -1,3 +1,37 @@
+/* Tooltip Styles */
+.tooltip {
+  position: fixed; /* Poziționare față de întregul ecran */
+  background: linear-gradient(145deg, #001f3f, #007bff);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 200px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  pointer-events: none; /* Evităm interferența cu mouse-ul */
+}
+
+.tooltip h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #d4af37; /* Aur pentru titlu */
+}
+
+.tooltip p {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+/* Activăm vizibilitatea când tooltip-ul este afișat */
+.tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Hexagon Grid */
 .hexagon-grid {
   display: flex;
@@ -6,12 +40,13 @@
   gap: 50px;
   flex-wrap: wrap;
   padding: 20px;
+  position: relative;
 }
 
 .hexagon {
   width: 150px;
   height: 165px;
-  background: linear-gradient(36deg, #007bff, #001f3f); /* Albastru accentuat */
+  background: linear-gradient(36deg, #007bff, #001f3f);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
   justify-content: center;
@@ -33,85 +68,63 @@
   font-weight: bold;
 }
 
-/* Modal Styles */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+/* Media Queries pentru Responsivitate */
 
-.modal-content {
-  background: linear-gradient(
-    145deg,
-    #001f3f,
-    #007bff
-  ); /* Dominat de albastru */
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  color: white;
-}
-
-.modal-content h2 {
-  margin-bottom: 15px;
-  color: #d4af37; /* Accent pe albastru */
-}
-
-.modal-content p {
-  font-size: 16px;
-  color: #e0e0e0; /* Gri deschis pentru contrast */
-}
-
-.close-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #007bff; /* Albastru pentru buton */
-  color: white;
-  border: 1px solid #001f3f; /* Contur subtil albastru închis */
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.close-button:hover {
-  background: #001f3f; /* Albastru închis la hover */
-  transform: scale(1.1);
-}
-
-/* Responsivitate */
+/* Tablete */
 @media (max-width: 768px) {
+  .tooltip {
+    width: 180px; /* Diminuăm lățimea */
+    padding: 10px; /* Mai puțin padding */
+  }
+
+  .tooltip h2 {
+    font-size: 16px; /* Text mai mic */
+  }
+
+  .tooltip p {
+    font-size: 12px; /* Text mai mic */
+  }
+
   .hexagon {
-    width: 100px;
-    height: 130px;
+    width: 120px; /* Reducem dimensiunea hexagonului */
+    height: 140px;
   }
 
   .hexagon-content {
-    font-size: 12px;
+    font-size: 12px; /* Font mai mic */
   }
 
-  .modal-content {
-    padding: 20px;
+  .hexagon-grid {
+    gap: 30px; /* Reducem spațiul dintre hexagoane */
   }
 }
 
+/* Telefoane */
 @media (max-width: 480px) {
+  .tooltip {
+    width: 150px; /* Dimensiune mai mică */
+    padding: 8px; /* Mai puțin padding */
+  }
+
+  .tooltip h2 {
+    font-size: 14px; /* Text mai mic */
+  }
+
+  .tooltip p {
+    font-size: 10px; /* Text mai mic */
+  }
+
   .hexagon {
-    width: 80px;
-    height: 100px;
+    width: 100px; /* Reducem și mai mult hexagoanele */
+    height: 115px;
   }
 
   .hexagon-content {
-    font-size: 10px;
+    font-size: 10px; /* Font mai mic */
+  }
+
+  .hexagon-grid {
+    gap: 20px; /* Mai puțin spațiu între hexagoane */
+    padding: 10px; /* Mai puțin padding general */
   }
 }

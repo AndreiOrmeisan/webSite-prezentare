@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./HexagonGrid.css";
 
 const HexagonGrid = ({ hexagons }) => {
-  const [selectedHexagon, setSelectedHexagon] = useState(null);
+  const [tooltip, setTooltip] = useState({ hexagon: null, x: 0, y: 0 });
 
-  const openModal = (hexagon) => {
-    setSelectedHexagon(hexagon);
+  const handleMouseEnter = (hexagon, e) => {
+    const { clientX, clientY } = e;
+    setTooltip({ hexagon, x: clientX, y: clientY });
   };
 
-  const closeModal = () => {
-    setSelectedHexagon(null);
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setTooltip((prev) => ({ ...prev, x: clientX, y: clientY }));
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip({ hexagon: null, x: 0, y: 0 });
   };
 
   return (
@@ -18,7 +24,9 @@ const HexagonGrid = ({ hexagons }) => {
         <div
           key={hexagon.id}
           className="hexagon"
-          onClick={() => openModal(hexagon)}
+          onMouseEnter={(e) => handleMouseEnter(hexagon, e)}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
         >
           <div className="hexagon-content">
             <h3>{hexagon.title}</h3>
@@ -26,16 +34,17 @@ const HexagonGrid = ({ hexagons }) => {
         </div>
       ))}
 
-      {selectedHexagon && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>{selectedHexagon.title}</h2>
-            {selectedHexagon.icon}
-            <p>{selectedHexagon.description}</p>
-            <button className="close-button" onClick={closeModal}>
-              Close
-            </button>
-          </div>
+      {tooltip.hexagon && (
+        <div
+          className="tooltip"
+          style={{
+            top: `${tooltip.y + 10}px`, // 10px distanță sub cursor
+            left: `${tooltip.x + 10}px`,
+          }}
+        >
+          <h2>{tooltip.hexagon.title}</h2>
+          {tooltip.hexagon.icon}
+          <p>{tooltip.hexagon.description}</p>
         </div>
       )}
     </div>
