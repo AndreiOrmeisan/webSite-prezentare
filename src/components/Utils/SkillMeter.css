@@ -1,6 +1,5 @@
-/* Dimensiuni implicite pentru iconițe */
 .skill-meter {
-  width: 60px; /* Lățimea iconiței */
+  width: 60px;
   margin: 20px;
 }
 
@@ -10,10 +9,9 @@
   margin-top: 10px;
 }
 
-/* Media Queries pentru rezoluții mai mici */
 @media (max-width: 768px) {
   .skill-meter {
-    width: 50px; /* Iconițe mai mici pe ecrane medii */
+    width: 50px;
   }
 
   .skill-meter h3 {
@@ -26,7 +24,7 @@
 
 @media (max-width: 480px) {
   .skill-meter {
-    width: 25px; /* Iconițe și mai mici pe ecrane mici */
+    width: 25px;
   }
 
   .skill-meter h3 {

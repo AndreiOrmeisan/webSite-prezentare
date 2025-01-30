@@ -1,6 +1,5 @@
-/* Tooltip Styles */
 .tooltip {
-  position: fixed; /* Poziționare față de întregul ecran */
+  position: fixed;
   background: linear-gradient(145deg, #001f3f, #007bff);
   padding: 15px;
   border-radius: 10px;
@@ -12,13 +11,13 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s;
-  pointer-events: none; /* Evităm interferența cu mouse-ul */
+  pointer-events: none;
 }
 
 .tooltip h2 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: #d4af37; /* Aur pentru titlu */
+  color: #d4af37;
 }
 
 .tooltip p {
@@ -26,13 +25,11 @@
   color: #e0e0e0;
 }
 
-/* Activăm vizibilitatea când tooltip-ul este afișat */
 .tooltip {
   opacity: 1;
   visibility: visible;
 }
 
-/* Hexagon Grid */
 .hexagon-grid {
   display: flex;
   justify-content: center;
@@ -68,63 +65,60 @@
   font-weight: bold;
 }
 
-/* Media Queries pentru Responsivitate */
-
-/* Tablete */
 @media (max-width: 768px) {
   .tooltip {
-    width: 180px; /* Diminuăm lățimea */
-    padding: 10px; /* Mai puțin padding */
+    width: 180px;
+    padding: 10px;
   }
 
   .tooltip h2 {
-    font-size: 16px; /* Text mai mic */
+    font-size: 16px;
   }
 
   .tooltip p {
-    font-size: 12px; /* Text mai mic */
+    font-size: 12px;
   }
 
   .hexagon {
-    width: 120px; /* Reducem dimensiunea hexagonului */
+    width: 120px;
     height: 140px;
   }
 
   .hexagon-content {
-    font-size: 12px; /* Font mai mic */
+    font-size: 12px;
   }
 
   .hexagon-grid {
-    gap: 30px; /* Reducem spațiul dintre hexagoane */
+    gap: 30px;
   }
 }
 
 /* Telefoane */
 @media (max-width: 480px) {
   .tooltip {
-    width: 150px; /* Dimensiune mai mică */
-    padding: 8px; /* Mai puțin padding */
+    width: 150px;
+    padding: 8px;
   }
 
   .tooltip h2 {
-    font-size: 14px; /* Text mai mic */
+    font-size: 14px;
   }
 
   .tooltip p {
-    font-size: 10px; /* Text mai mic */
+    font-size: 10px;
   }
 
   .hexagon {
-    width: 100px; /* Reducem și mai mult hexagoanele */
+    width: 100px;
     height: 115px;
   }
 
   .hexagon-content {
-    font-size: 10px; /* Font mai mic */
+    font-size: 10px;
   }
 
   .hexagon-grid {
-    gap: 20px; /* Mai puțin spațiu între hexagoane */
-    padding: 10px; /* Mai puțin padding general */
+    gap: 20px;
+    padding: 10px;
   }
 }

@@ -12,10 +12,9 @@ const HexagonGrid = ({ hexagons }) => {
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
 
-    // Verificăm limitele ecranului
-    const tooltipWidth = 200; // Lățimea tooltip-ului în CSS
-    const tooltipHeight = 100; // Înălțimea aproximativă a tooltip-ului
-    const padding = 10; // Margine suplimentară
+    const tooltipWidth = 200;
+    const tooltipHeight = 100;
+    const padding = 10;
 
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -23,12 +22,10 @@ const HexagonGrid = ({ hexagons }) => {
     let x = clientX + padding;
     let y = clientY + padding;
 
-    // Ajustăm poziția pe orizontală dacă iese din ecran
     if (x + tooltipWidth > screenWidth) {
       x = clientX - tooltipWidth - padding;
     }
 
-    // Ajustăm poziția pe verticală dacă iese din ecran
     if (y + tooltipHeight > screenHeight) {
       y = clientY - tooltipHeight - padding;
     }

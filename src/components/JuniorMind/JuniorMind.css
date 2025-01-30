@@ -15,15 +15,15 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 10px; /* Mai puțin padding */
+    padding: 10px;
   }
 
   .container h3 {
-    font-size: 1.2rem; /* Dimensiune titlu mai mică */
+    font-size: 1.2rem;
   }
 
   .container p {
-    font-size: 0.9rem; /* Reducere text pentru ecrane mici */
+    font-size: 0.9rem;
   }
 }
 
@@ -31,14 +31,14 @@
   .container {
     flex-direction: column;
     padding: 5px;
-    gap: 10px; /* Spațiere mai mică între elemente */
+    gap: 10px;
   }
 
   .container h3 {
-    font-size: 1.2rem; /* Diminuare titlu */
+    font-size: 1.2rem;
   }
 
   .container p {
-    font-size: 1rem; /* Text mic pentru ecrane foarte mici */
+    font-size: 1rem;
   }
 }

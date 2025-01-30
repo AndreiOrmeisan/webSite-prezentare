@@ -1,42 +1,41 @@
 .cards-oa {
   background-color: rgba(255, 255, 255, 0.233);
-  margin: 15px auto; /* Centrare și spațiere între carduri */
-  height: auto; /* Permite extinderea pe baza conținutului */
-  width: 90%; /* Ocupă aproape întreaga lățime pe dispozitive mici */
-  max-width: 400px; /* Lățime maximă pe ecrane mari */
+  margin: 15px auto;
+  height: auto;
+  width: 90%;
+  max-width: 400px;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Adăugare umbră pentru estetică */
-  word-wrap: break-word; /* Text lung va fi împărțit pe linii noi */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  word-wrap: break-word;
 }
 
 .cards-oa h3 {
-  font-size: 1.2rem; /* Dimensiune rezonabilă pentru titlu */
+  font-size: 1.2rem;
   margin-bottom: 10px;
   color: white;
   text-align: center;
 }
 
 .cards-oa p {
-  font-size: 1rem; /* Dimensiune text normal */
+  font-size: 1rem;
   text-align: justify;
   color: white;
-  line-height: 1.5; /* Spațiere între linii pentru lizibilitate */
+  line-height: 1.5;
 }
 
-/* Media Queries pentru rezoluții mai mici */
 @media (max-width: 768px) {
   .cards-oa {
-    max-width: none; /* Elimină limita de lățime pe ecrane mici */
-    padding: 10px; /* Mai puțin padding pe ecrane mici */
+    max-width: none;
+    padding: 10px;
   }
 
   .cards-oa h3 {
-    font-size: 1rem; /* Titlul mai mic pe ecrane medii */
+    font-size: 1rem;
   }
 
   .cards-oa p {
-    font-size: 0.9rem; /* Diminuarea textului */
+    font-size: 0.9rem;
   }
 }
 
@@ -46,10 +45,10 @@
   }
 
   .cards-oa h3 {
-    font-size: 0.9rem; /* Titlu și mai mic */
+    font-size: 0.9rem;
   }
 
   .cards-oa p {
-    font-size: 0.8rem; /* Textul mai mic pentru dispozitive foarte mici */
+    font-size: 0.8rem;
   }
 }

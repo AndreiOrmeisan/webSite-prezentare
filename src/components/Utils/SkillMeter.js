@@ -1,7 +1,7 @@
 import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import "./SkillMeter.css"; // Import fișier CSS
+import "./SkillMeter.css";
 
 const SkillMeter = ({ skill, percentage, color }) => {
   return (
@@ -12,7 +12,7 @@ const SkillMeter = ({ skill, percentage, color }) => {
         styles={buildStyles({
           textColor: "#fff",
           pathColor: color,
-          trailColor: "#3e4a61", // Background circle
+          trailColor: "#3e4a61",
         })}
       />
       <h3>{skill}</h3>

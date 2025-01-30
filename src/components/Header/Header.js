@@ -11,7 +11,7 @@ export default function Header() {
   const handleClick = (route) => {
     navigate(route);
     if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false); // Close menu when a route is selected
+      setIsMobileMenuOpen(false);
     }
   };
 

@@ -1,26 +1,22 @@
-/* Header general */
 .header-oa {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-height: 50px;
   padding: 20px;
-  background: linear-gradient(135deg, #1b263b, #2a3b59); /* Gradient */
-  color: white;
+  background: linear-gradient(135deg, #1b263b, #2a3b59);
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo-ul */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #f1c40f; /* Aur */
+  color: #f1c40f;
 }
 
-/* Meniu desktop */
 .menu {
   display: flex;
   gap: 20px;
@@ -43,11 +39,10 @@
 }
 
 .button-oa-active {
-  color: #f1c40f; /* Aur */
+  color: #f1c40f;
   border-bottom: 2px solid #f1c40f;
 }
 
-/* Meniu hamburger */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -62,7 +57,6 @@
   transition: all 0.3s ease;
 }
 
-/* Meniu mobil */
 .menu.open {
   display: flex;
   flex-direction: column;
@@ -84,7 +78,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsivitate */
 @media (max-width: 768px) {
   .menu {
     display: none;
